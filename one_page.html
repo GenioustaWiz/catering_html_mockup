@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista Restaurant & Catering</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .menu-item {
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        .catering-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+        }
+        .order-btn {
+            background: #ff6b6b;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .order-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        .catering-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .catering-card:hover {
+            transform: translateY(-10px);
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .contact-section {
+            background: #f8f9fa;
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-utensils me-2"></i>Bella Vista</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catering">Catering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn order-btn ms-2" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Welcome to Bella Vista</h1>
+                    <p class="lead mb-4">Experience authentic flavors and exceptional service. From intimate dinners to grand celebrations, we bring culinary excellence to every occasion.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn order-btn btn-lg" data-bs-toggle="modal" data-bs-target="#orderModal">
+                            <i class="fas fa-shopping-cart me-2"></i>Order Food
+                        </button>
+                        <a href="#catering" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Book Catering
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Our Menu</h2>
+                    <p class="lead text-muted">Discover our signature dishes crafted with the finest ingredients</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Margherita Pizza</h5>
+                            <p class="card-text">Fresh mozzarella, tomato sauce, basil</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$18.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pasta">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta Carbonara</h5>
+                            <p class="card-text">Creamy sauce, pancetta, parmesan</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$22.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Bella Burger</h5>
+                            <p class="card-text">Premium beef, cheese, special sauce</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$16.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Salad">
+                        <div class="card-body">
+                            <h5 class="card-title">Caesar Salad</h5>
+                            <p class="card-text">Romaine lettuce, croutons, parmesan</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$14.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Soup">
+                        <div class="card-body">
+                            <h5 class="card-title">Tomato Basil Soup</h5>
+                            <p class="card-text">Creamy tomato soup with fresh basil</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$12.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-item h-100">
+                        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Dessert">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">Classic Italian dessert with coffee</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-success">$8.99</span>
+                                <button class="btn btn-sm order-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Section -->
+    <section id="catering" class="catering-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 fw-bold mb-4">Professional Catering Services</h2>
+                    <p class="lead">From intimate gatherings to grand celebrations, we make every event memorable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card catering-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-birthday-cake fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Wedding Catering</h4>
+                            <p class="card-text">Make your special day unforgettable with our elegant wedding catering packages. Custom menus available.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>50-500 guests</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Custom menu design</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Professional service staff</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Table setup & decoration</li>
+                            </ul>
+                            <div class="mt-4">
+                                <h5 class="text-primary">Starting at $45/person</h5>
+                                <button class="btn order-btn mt-2" data-bs-toggle="modal" data-bs-target="#cateringModal">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card catering-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-building fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Corporate Events</h4>
+                            <p class="card-text">Professional catering for business meetings, conferences, and corporate celebrations.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>10-200 guests</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Breakfast, lunch & dinner</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Dietary accommodations</li>
+                                <li><i class="fas fa-check text-success me-2"></i>On-time delivery</li>
+                            </ul>
+                            <div class="mt-4">
+                                <h5 class="text-primary">Starting at $25/person</h5>
+                                <button class="btn order-btn mt-2" data-bs-toggle="modal" data-bs-target="#cateringModal">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card catering-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-users fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Private Parties</h4>
+                            <p class="card-text">Celebrate birthdays, anniversaries, and special occasions with our personalized catering services.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>15-100 guests</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Buffet or plated service</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Party setup assistance</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cleanup included</li>
+                            </ul>
+                            <div class="mt-4">
+                                <h5 class="text-primary">Starting at $35/person</h5>
+                                <button class="btn order-btn mt-2" data-bs-toggle="modal" data-bs-target="#cateringModal">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Contact Us</h2>
+                    <p class="lead text-muted">Get in touch for reservations, orders, or catering inquiries</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                        <h5>Location</h5>
+                        <p>123 Gourmet Street<br>Downtown, NY 10001</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                        <h5>Phone</h5>
+                        <p>Restaurant: (555) 123-4567<br>Catering: (555) 123-4568</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5>Hours</h5>
+                        <p>Mon-Thu: 11AM-10PM<br>Fri-Sat: 11AM-11PM<br>Sun: 12PM-9PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-utensils me-2"></i>Bella Vista</h5>
+                    <p>Bringing exceptional dining experiences to your table since 1995. From our restaurant to your event, we're committed to culinary excellence.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
+                        <li><a href="#catering" class="text-light text-decoration-none">Catering Services</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant & Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Food Online</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Address</label>
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Order Type</label>
+                            <select class="form-select" required>
+                                <option value="">Choose...</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="pickup">Pickup</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Special Instructions</label>
+                            <textarea class="form-control" rows="2" placeholder="Any special requests or dietary requirements..."></textarea>
+                        </div>
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Your order will be confirmed by phone within 5 minutes. Delivery time: 30-45 minutes.
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn order-btn">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catering Modal -->
+    <div class="modal fade" id="cateringModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Catering Quote Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Event Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Number of Guests</label>
+                                <input type="number" class="form-control" min="10" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Event Type</label>
+                                <select class="form-select" required>
+                                    <option value="">Choose...</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="private">Private Party</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Event Location</label>
+                            <textarea class="form-control" rows="2" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Additional Details</label>
+                            <textarea class="form-control" rows="3" placeholder="Tell us about your event, dietary requirements, preferred menu style, etc."></textarea>
+                        </div>
+                        <div class="alert alert-success">
+                            <i class="fas fa-check-circle me-2"></i>
+                            We'll contact you within 24 hours with a detailed quote and menu options.
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn order-btn">Request Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.menu-item .order-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.card');
+                const itemName = card.querySelector('.card-title').textContent;
+                const itemPrice = card.querySelector('.text-success').textContent;
+                
+                // Simple cart notification
+                const toast = document.createElement('div');
+                toast.className = 'toast show position-fixed top-0 end-0 m-3';
+                toast.style.zIndex = '9999';
+                toast.innerHTML = `
+                    <div class="toast-body bg-success text-white">
+                        <i class="fas fa-check-circle me-2"></i>
+                        ${itemName} added to cart!
+                    </div>
+                `;
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
+
